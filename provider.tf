@@ -1,7 +1,7 @@
 provider "aws" {
   region                  = "us-east-1"
-  shared_credentials_file = "~/.aws/credentials"
-  profile                 = "ccsandbox"
+  # shared_credentials_file = "~/.aws/credentials"
+  # profile                 = "ccsandbox"
 }
 
 terraform {
@@ -11,7 +11,7 @@ terraform {
     dynamodb_table          = "absipatcodepipes"
     region                  = "us-east-1"
     key                     = "codepipes/terra.state"
-    shared_credentials_file = "~/.aws/credentials"
-    profile                 = "ccsandbox"
+    # shared_credentials_file = "~/.aws/credentials"
+    # profile                 = "ccsandbox"
   }
 }
