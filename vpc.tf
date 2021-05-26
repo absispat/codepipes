@@ -15,8 +15,8 @@ module "vpc" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "copepipekey-key"
-  #public_key = var.pubkey
-  public_key = file("/Users/absipat/.ssh/id_rsa.pub")
+  public_key = var.pubkey
+  #public_key = file("/Users/absipat/.ssh/id_rsa.pub")
 }
 
 
