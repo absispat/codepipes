@@ -22,21 +22,21 @@ resource "aws_key_pair" "deployer" {
 
 
 
-data "aws_ami" "ubuntu" {
-    most_recent = true
-
-    filter {
-        name   = "name"
-        values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
-    }
-
-    filter {
-        name   = "virtualization-type"
-        values = ["hvm"]
-    }
-
-    owners      = ["amazon"]
-}
+# data "aws_ami" "ubuntu" {
+#     most_recent = true
+#
+#     filter {
+#         name   = "name"
+#         values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
+#     }
+#
+#     filter {
+#         name   = "virtualization-type"
+#         values = ["hvm"]
+#     }
+#
+#     owners      = ["amazon"]
+# }
 
 
 
@@ -70,7 +70,8 @@ resource "aws_security_group" "allow_all" {
 
 
 resource "aws_instance" "web" {
-  ami             = data.aws_ami.ubuntu.id
+  #ami             = data.aws_ami.ubuntu.id
+  ami             = "ami-05f7491af5eef733a"
   instance_type   = "t3.micro"
   subnet_id       = module.vpc.public_subnets[0]
   security_groups = [aws_security_group.allow_all.id]
