@@ -1,8 +1,8 @@
-provider "aws" {
-  region                  = "us-east-1"
-  # shared_credentials_file = "~/.aws/credentials"
-  # profile                 = "ccsandbox"
-}
+# provider "aws" {
+#   region                  = "eu-central-1"
+#   # shared_credentials_file = "~/.aws/credentials"
+#   # profile                 = "ccsandbox"
+# }
 
 # terraform {
 #   backend "s3" {
